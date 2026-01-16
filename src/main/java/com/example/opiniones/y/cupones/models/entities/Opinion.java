@@ -1,12 +1,8 @@
 package com.example.opiniones.y.cupones.models.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -17,10 +13,10 @@ public class Opinion {
     private int id_opinion;
 
     @Column(nullable = false)
-    private int id_curso; // Relación con Curso en el diagrama
+    private int id_curso; 
 
     @Column(nullable = false)
-    private int id_usuario; // Relación con Usuario en el diagrama
+    private int id_usuario;
 
     @Column(nullable = false, length = 500)
     private String comentario;
@@ -29,5 +25,5 @@ public class Opinion {
     private int calificacion;
 
     @Column(nullable = false)
-    private java.time.LocalDateTime fecha;
+    private LocalDateTime fecha;
 }
