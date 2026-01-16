@@ -23,8 +23,10 @@ public class OpinionService {
     public Opinion guardar(AgregarOpinion request) {
         Opinion opinion = new Opinion();
         opinion.setId_curso(request.getId_curso());
+        opinion.setId_usuario(request.getId_usuario());
         opinion.setComentario(request.getComentario());
         opinion.setCalificacion(request.getCalificacion());
+        opinion.setFecha(java.time.LocalDateTime.now()); // Se asigna la fecha actual
         return opinionRepository.save(opinion);
     }
     

@@ -15,7 +15,7 @@ import com.example.opiniones.y.cupones.models.request.AgregarCupon;
 import com.example.opiniones.y.cupones.service.CuponService;
 
 @RestController
-@RequestMapping
+@RequestMapping("cupon")
 
 
 public class CuponController {

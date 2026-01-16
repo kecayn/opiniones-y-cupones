@@ -7,12 +7,12 @@ import lombok.Data;
 @Data
 
 public class AgregarOpinion {
-    @NotNull
+   @NotNull
     private int id_curso;
-
+    @NotNull
+    private int id_usuario;
     @NotBlank
     private String comentario;
-
     @NotNull
     private int calificacion;
     

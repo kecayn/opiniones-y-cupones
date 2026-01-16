@@ -12,18 +12,22 @@ import lombok.Data;
 @Data
 @Table(name = "opiniones")
 public class Opinion {
-    @
-    Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_opinion;
 
     @Column(nullable = false)
-    private int id_curso; // Este es el ID que vincularemos luego con el microservicio de Cursos
+    private int id_curso; // Relación con Curso en el diagrama
+
+    @Column(nullable = false)
+    private int id_usuario; // Relación con Usuario en el diagrama
 
     @Column(nullable = false, length = 500)
     private String comentario;
 
     @Column(nullable = false)
-    private int calificacion; // Puntuación de 1 a 5
-    
+    private int calificacion;
+
+    @Column(nullable = false)
+    private java.time.LocalDateTime fecha;
 }

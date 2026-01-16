@@ -14,7 +14,7 @@ import com.example.opiniones.y.cupones.models.request.AgregarOpinion;
 import com.example.opiniones.y.cupones.service.OpinionService;
 
 @RestController
-@RequestMapping
+@RequestMapping("opinion")
 
 public class OpinionController {
     @Autowired
